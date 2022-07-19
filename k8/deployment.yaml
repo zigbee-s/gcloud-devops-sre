@@ -18,4 +18,4 @@ spec:
       - image: gcr.io/pipeline-356718/node-app
         name: node-app
         ports:
-        - containerPort: 8080
+        - containerPort: 3000

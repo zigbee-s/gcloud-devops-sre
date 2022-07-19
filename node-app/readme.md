@@ -70,8 +70,8 @@ This project sets up a CI-Cd pipeline using google cloud build, in which the pip
   <h3>Step 6: Add IAM Policy for the cloudbuild to access other services</h3>
   <span>Run the following command in your terminal </span>
   <pre>
-  gcloud projects add-iam-policy-binding pipeline-356718 \
-  --member='serviceAccount: pipeline-356718@cloudbuild.gserviceaccount.com' \
+  gcloud projects add-iam-policy-binding [PROJECT-ID] \
+  --member='serviceAccount:[PROJECT_NUMBER]@cloudbuild.gserviceaccount.com' \
   --role='roles/container.admin'
   </pre>
   

@@ -4,14 +4,14 @@ steps:
   entrypoint: 'bash'
   args: [
    '-c',
-   'docker pull gcr.io/pipeline-356718/node-app:latest || exit 0'
+   'docker pull gcr.io/[Project-id]/node-app:latest || exit 0'
   ]
 # Step 2
 - name: gcr.io/cloud-builders/docker
   args: [
    'build',
    '-t',
-   'gcr.io/pipeline-356718/node-app:latest',
+   'gcr.io/[Project-id]/node-app:latest',
    '.'
   ]
   dir: 'node-app'
@@ -28,12 +28,12 @@ steps:
    'image',
    'deployment',
    'node-app',
-   'node-app=gcr.io/pipeline-356718/node-app:latest'
+   'node-app=gcr.io/[Project-id]/node-app:latest'
   ]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=europe-west1-d'
   - 'CLOUDSDK_CONTAINER_CLUSTER=gke-node-app'
   # Push the image to Google Container Registry with the latest tag
 images: [
-   'gcr.io/pipeline-356718/node-app:latest'
+   'gcr.io/[Project-id]/node-app:latest'
   ]

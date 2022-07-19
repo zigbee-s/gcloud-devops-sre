@@ -1,6 +1,6 @@
 <h2>Description</h2>
 This project sets up a CI-Cd pipeline using google cloud build, in which the pipeline is triggered by a commit to the Github repo. The cloud build service will pull the code from repo and create an image using dockerfile, this image is then used to deploy the website on google kubernetes engine
-
+<br>
 <ol>
   <li>A developer pushes the source code to GitHub, which lends itself as the Version Control System.</li>
   <li>GitHub triggers a post-commit hook to Cloud Build.</li>
@@ -32,15 +32,23 @@ This project sets up a CI-Cd pipeline using google cloud build, in which the pip
   <li>The package.json file contains all the dependecies used</li>
   
   <h2>Steps</h2>
-  <h3>Step 1: Create a new google cloud project<h3>
+  <h3>Step 1: Create a new google cloud project</h3>
+    <br>
+    <span></spna>
+   
     ![image](https://user-images.githubusercontent.com/76873410/179835246-e1158187-82a1-40df-88a8-52288b725a08.png)
 
     <ul>
       <li>Note the Project-id and Project-number 
       <li>These will be used in the rest of setup and identified as [Project-id] and [Project-number] and need to be replaced with your values
       <li>Run the following command in your terminal, so that you can interact with it from cli</li>
-      <pre> gcloud config set project [project-id] <pre>
+      <pre> 
+        gcloud config set project [project-id] 
+       </pre>
+      <span></spna>
+      
       ![image](https://user-images.githubusercontent.com/76873410/179835613-9c5ee98c-a607-4120-a754-2626ba1f3831.png)
+    
     </ul>
         
   <h3>Step 2: Clone the project</h3>
@@ -80,7 +88,10 @@ This project sets up a CI-Cd pipeline using google cloud build, in which the pip
     <li>Navigate to cloud build, select trigger and click on Connect repository</li> 
     <li>Select github as the source</li>
     <li>Select the GitHub account, repository and click on Connect Repository:</li>
-    ![image](https://user-images.githubusercontent.com/76873410/179836837-9a77bb5c-291f-4160-9bdc-ceff4b960972.png)
+    <span></span>
+ 
+ ![image](https://user-images.githubusercontent.com/76873410/179836837-9a77bb5c-291f-4160-9bdc-ceff4b960972.png)
+ 
   </ul>
   
   <h3>Step 8: Update cloudbuild.yaml with your [Project-id] and [Project-number]</h3>
@@ -99,6 +110,7 @@ This project sets up a CI-Cd pipeline using google cloud build, in which the pip
   
   <h3>Step 10: Run the trigger</h3>
   <span> You will see something like this: </span>
+  
   ![image](https://user-images.githubusercontent.com/76873410/179837552-eb2448d7-442d-4130-b70d-3b5060f3e972.png)
 
   <h3>Step 11: Get endpoint to the website deployed on kubernetes cluster</h3>
@@ -106,6 +118,7 @@ This project sets up a CI-Cd pipeline using google cloud build, in which the pip
   <pre>
     kubectl get svc
   </pre>
+ 
   ![image](https://user-images.githubusercontent.com/76873410/179837790-9a7e1d1f-25ac-47d9-8196-446507caf9b2.png)
 
   ![image](https://user-images.githubusercontent.com/76873410/179837819-fd3e035f-e06d-4480-90cf-3d107f988ebd.png)

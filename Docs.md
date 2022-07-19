@@ -142,7 +142,7 @@
 </ul>
 <h3>Cloud Monitoring Concepts</h3>
 <ul>
-    <li>Workdpaces</li>
+    <li>Workspaces</li>
     <ol>
         <li>GCP's tool for monitoring GCP and AWS resources under a single pane</li>
         <li>All monitoring tools live in a workspace</li>

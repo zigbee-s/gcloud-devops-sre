@@ -44,7 +44,7 @@ This project sets up a CI-Cd pipeline using google cloud build, in which the pip
     </ul>
         
   <h3>Step 2: Clone the project</h3>
-  <pre> git clone https://github.com/zigbee-s/gcloud-devops-sre.git </pre>
+  <pre> git clone https://github.com/zigbee-s/gcp-devops-sre.git </pre>
   
   <h3>Step 3: Build the Dockerfile</h3>
   <pre> docker build -t gcr.io/[Project-id]/node-app:latest . </pre>
